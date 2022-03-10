@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="db helvethaica x med.ttf">
+            <string>DBHelvethaicaX-Med</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ContactView" customModule="iGS_SRV" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="9iU-Mq-TjJ" id="PvK-jg-pel"/>
+                <outlet property="fbView" destination="q0b-6a-xFQ" id="gHG-gY-E4L"/>
+                <outlet property="lineView" destination="JzV-Rx-CdX" id="Fbd-YH-XxW"/>
+                <outlet property="logoImage" destination="8Oi-AD-FME" id="Qgm-fF-vNu"/>
+                <outlet property="telView" destination="JEZ-Ld-cgI" id="V8y-E0-L2H"/>
+                <outlet property="txtFB" destination="EaI-US-DdJ" id="tVs-cT-1R2"/>
+                <outlet property="txtLine" destination="lud-RV-Akt" id="ir5-bE-jJI"/>
+                <outlet property="txtTel" destination="jgO-cg-anZ" id="d8D-w1-579"/>
+                <outlet property="txtWelcome" destination="03c-mW-BbB" id="BcK-IN-N1c"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="9iU-Mq-TjJ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="image_tool" translatesAutoresizingMaskIntoConstraints="NO" id="8Oi-AD-FME">
+                            <rect key="frame" x="147" y="30" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="8Oi-AD-FME" secondAttribute="height" id="RCz-tV-ZxG"/>
+                                <constraint firstAttribute="width" constant="120" id="T6H-QF-dE7"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zYX-5G-OnS">
+                            <rect key="frame" x="47" y="245" width="320" height="150"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JEZ-Ld-cgI" customClass="RoundUIView" customModule="iGS_SRV" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_phone" translatesAutoresizingMaskIntoConstraints="NO" id="mLr-wg-v6I">
+                                            <rect key="frame" x="10" y="5" width="66.5" height="33.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="mLr-wg-v6I" secondAttribute="height" multiplier="2" id="SOv-ox-vkm"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="088-2686387" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgO-cg-anZ">
+                                            <rect key="frame" x="96.5" y="7" width="101" height="29"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="24"/>
+                                            <color key="textColor" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="mLr-wg-v6I" firstAttribute="top" secondItem="JEZ-Ld-cgI" secondAttribute="top" constant="5" id="0A6-u7-l9j"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="jgO-cg-anZ" secondAttribute="trailing" constant="20" symbolic="YES" id="4Hy-zN-9Kr"/>
+                                        <constraint firstItem="jgO-cg-anZ" firstAttribute="centerY" secondItem="mLr-wg-v6I" secondAttribute="centerY" id="Fwa-HP-uAq"/>
+                                        <constraint firstItem="mLr-wg-v6I" firstAttribute="leading" secondItem="JEZ-Ld-cgI" secondAttribute="leading" constant="10" id="VPV-aS-Cf2"/>
+                                        <constraint firstAttribute="bottom" secondItem="mLr-wg-v6I" secondAttribute="bottom" constant="5" id="WAB-ko-cY5"/>
+                                        <constraint firstItem="jgO-cg-anZ" firstAttribute="leading" secondItem="mLr-wg-v6I" secondAttribute="trailing" constant="20" id="i6V-nh-U1B"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-6a-xFQ" customClass="RoundUIView" customModule="iGS_SRV" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="53.5" width="320" height="43"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_fb" translatesAutoresizingMaskIntoConstraints="NO" id="HvS-TU-4sX">
+                                            <rect key="frame" x="10" y="5" width="66.5" height="33"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="HvS-TU-4sX" secondAttribute="height" multiplier="2" id="VC8-Tf-41i"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook ...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="EaI-US-DdJ">
+                                            <rect key="frame" x="96.5" y="7" width="97.5" height="29"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="24"/>
+                                            <color key="textColor" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="HvS-TU-4sX" secondAttribute="bottom" constant="5" id="7hl-RG-5Rd"/>
+                                        <constraint firstItem="EaI-US-DdJ" firstAttribute="centerY" secondItem="HvS-TU-4sX" secondAttribute="centerY" id="L5m-uc-3XJ"/>
+                                        <constraint firstItem="HvS-TU-4sX" firstAttribute="top" secondItem="q0b-6a-xFQ" secondAttribute="top" constant="5" id="aRs-q3-Cio"/>
+                                        <constraint firstItem="EaI-US-DdJ" firstAttribute="leading" secondItem="HvS-TU-4sX" secondAttribute="trailing" constant="20" id="jak-re-210"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EaI-US-DdJ" secondAttribute="trailing" constant="20" symbolic="YES" id="oZR-c0-dv4"/>
+                                        <constraint firstItem="HvS-TU-4sX" firstAttribute="leading" secondItem="q0b-6a-xFQ" secondAttribute="leading" constant="10" id="wd5-72-EVU"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JzV-Rx-CdX" customClass="RoundUIView" customModule="iGS_SRV" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="106.5" width="320" height="43.5"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_line" translatesAutoresizingMaskIntoConstraints="NO" id="032-rP-alN">
+                                            <rect key="frame" x="10" y="3" width="70.5" height="35.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="032-rP-alN" secondAttribute="height" multiplier="2" id="CgX-qh-VZg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@......." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lud-RV-Akt">
+                                            <rect key="frame" x="100.5" y="6.5" width="47" height="29"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="24"/>
+                                            <color key="textColor" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="lud-RV-Akt" firstAttribute="leading" secondItem="032-rP-alN" secondAttribute="trailing" constant="20" id="8kV-12-qS6"/>
+                                        <constraint firstItem="032-rP-alN" firstAttribute="top" secondItem="JzV-Rx-CdX" secondAttribute="top" constant="3" id="DTo-i6-3D2"/>
+                                        <constraint firstAttribute="bottom" secondItem="032-rP-alN" secondAttribute="bottom" constant="5" id="EhC-SA-sdT"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lud-RV-Akt" secondAttribute="trailing" constant="20" symbolic="YES" id="MBX-kJ-vBW"/>
+                                        <constraint firstItem="032-rP-alN" firstAttribute="leading" secondItem="JzV-Rx-CdX" secondAttribute="leading" constant="10" id="OGJ-Wa-OUd"/>
+                                        <constraint firstItem="lud-RV-Akt" firstAttribute="centerY" secondItem="032-rP-alN" secondAttribute="centerY" id="o5B-ZW-9WP"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="g4P-si-QBS"/>
+                                <constraint firstAttribute="width" constant="320" id="qAs-wM-5fq"/>
+                            </constraints>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03c-mW-BbB">
+                            <rect key="frame" x="158" y="158" width="98" height="77"/>
+                            <string key="text">ติดต่อ
+ห้างทอง....</string>
+                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="32"/>
+                            <color key="textColor" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="03c-mW-BbB" firstAttribute="top" secondItem="8Oi-AD-FME" secondAttribute="bottom" constant="8" id="0oa-mc-N1v"/>
+                        <constraint firstItem="03c-mW-BbB" firstAttribute="centerX" secondItem="8Oi-AD-FME" secondAttribute="centerX" id="3cR-MH-0Fp"/>
+                        <constraint firstItem="8Oi-AD-FME" firstAttribute="centerX" secondItem="9iU-Mq-TjJ" secondAttribute="centerX" id="cxu-W3-bIm"/>
+                        <constraint firstItem="zYX-5G-OnS" firstAttribute="top" secondItem="03c-mW-BbB" secondAttribute="bottom" constant="10" id="rOv-2Y-FWE"/>
+                        <constraint firstItem="zYX-5G-OnS" firstAttribute="centerX" secondItem="03c-mW-BbB" secondAttribute="centerX" id="zYS-bV-UrK"/>
+                        <constraint firstItem="8Oi-AD-FME" firstAttribute="top" secondItem="9iU-Mq-TjJ" secondAttribute="top" constant="30" id="zhx-Mb-4ki"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="139" y="96"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_fb" width="97" height="49"/>
+        <image name="ic_line" width="97" height="49"/>
+        <image name="ic_phone" width="97" height="49"/>
+        <image name="image_tool" width="105" height="90"/>
+    </resources>
+</document>

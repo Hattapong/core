@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="db helvethaica x med.ttf">
+            <string>DBHelvethaicaX-Med</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavingGoldView" customModule="iGs" customModuleProvider="target">
+            <connections>
+                <outlet property="amount" destination="bpe-cS-T0X" id="HRf-69-EkF"/>
+                <outlet property="bankAccountId" destination="dLK-1O-07G" id="Eno-CM-sny"/>
+                <outlet property="bankName" destination="4MW-Sp-M5F" id="XSb-mp-Saq"/>
+                <outlet property="btSave" destination="hFz-bN-4Y9" id="9G5-WO-0Ca"/>
+                <outlet property="btSelectBranch" destination="ksr-oe-3T0" id="BoO-vp-aLD"/>
+                <outlet property="btSelectContracId" destination="GV3-gZ-Ouf" id="dcU-Ek-lH8"/>
+                <outlet property="contentView" destination="sBD-40-bPo" id="onN-7K-ytd"/>
+                <outlet property="modeDescription" destination="nDk-IZ-H3q" id="g0t-VK-tjf"/>
+                <outlet property="modeSwitch" destination="jJW-bE-Wob" id="vJl-dM-55n"/>
+                <outlet property="uploadDescription" destination="uSV-z7-hif" id="txp-Ra-ejJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="sBD-40-bPo">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fDH-SM-W0i">
+                            <rect key="frame" x="8" y="20" width="398" height="327"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-II-Icj">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ออมแบบไม่เปิดบัญชี" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDk-IZ-H3q">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="22"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-bE-Wob">
+                                            <rect key="frame" x="0.0" y="0.0" width="2" height="40"/>
+                                            <color key="onTintColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="modeChanged:" destination="-1" eventType="valueChanged" id="NtK-JA-Fe4"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="R4o-Fn-ecw"/>
+                                    </constraints>
+                                </stackView>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GV3-gZ-Ouf" customClass="RoundedUIButton" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="42.5" width="398" height="40"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="oa3-eW-hY4"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                    <state key="normal" title="เลือกบัญชีออมทอง">
+                                        <color key="titleColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btSelectContract_click:" destination="-1" eventType="touchUpInside" id="5y7-6y-aPm"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksr-oe-3T0" customClass="RoundedUIButton" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="45" width="398" height="40"/>
+                                    <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="LRd-2i-asX"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                    <state key="normal" title="เลือกสาขาที่ต้องการ">
+                                        <color key="titleColor" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="handleSelectBranch:" destination="-1" eventType="touchUpInside" id="5BU-Nv-aqs"/>
+                                    </connections>
+                                </button>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YaT-oQ-sFv">
+                                    <rect key="frame" x="0.0" y="90" width="398" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="Rle-fH-sZP"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="โปรดโอนเงินไปที่" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eo0-aP-LCQ">
+                                    <rect key="frame" x="0.0" y="115" width="398" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                    <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ชื่อธนาคาร" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4MW-Sp-M5F" customClass="RoundTextField" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="143.5" width="398" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="M8W-Fy-OtD"/>
+                                    </constraints>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="22"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.70980392156862748" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyS-no-bJA" customClass="RoundUIView" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="188.5" width="398" height="40"/>
+                                    <subviews>
+                                        <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="เลขบัญชี" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLK-1O-07G" customClass="RoundTextField" customModule="iGs" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="Lqk-p9-N94"/>
+                                            </constraints>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="22"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcV-EB-mFW" customClass="RoundedUIButton" customModule="iGs" customModuleProvider="target">
+                                            <rect key="frame" x="308" y="0.0" width="90" height="40"/>
+                                            <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="2un-YW-uQi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="คัดลอก">
+                                                <color key="titleColor" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="handleBankAcctNoCopy:" destination="-1" eventType="touchUpInside" id="QK1-1r-r25"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="dLK-1O-07G" firstAttribute="leading" secondItem="AyS-no-bJA" secondAttribute="leading" id="99i-YF-HB9"/>
+                                        <constraint firstAttribute="bottom" secondItem="zcV-EB-mFW" secondAttribute="bottom" id="K74-gK-RaL"/>
+                                        <constraint firstItem="dLK-1O-07G" firstAttribute="top" secondItem="AyS-no-bJA" secondAttribute="top" id="jz5-Cv-Ia3"/>
+                                        <constraint firstAttribute="trailing" secondItem="zcV-EB-mFW" secondAttribute="trailing" id="kQY-6p-Iws"/>
+                                        <constraint firstAttribute="bottom" secondItem="dLK-1O-07G" secondAttribute="bottom" id="w29-en-QXi"/>
+                                        <constraint firstAttribute="height" constant="40" id="wWb-X7-LpT"/>
+                                        <constraint firstAttribute="trailing" secondItem="dLK-1O-07G" secondAttribute="trailing" id="xub-dq-jtH"/>
+                                        <constraint firstItem="zcV-EB-mFW" firstAttribute="top" secondItem="AyS-no-bJA" secondAttribute="top" id="zEj-Ph-V1x"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.70980392156862748" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-PD-pwM">
+                                    <rect key="frame" x="0.0" y="233.5" width="398" height="20"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="eCK-Zx-1ja"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ระบุจำนวนเงิน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNZ-2A-uaN">
+                                    <rect key="frame" x="0.0" y="258.5" width="398" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                    <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="จำนวนเงินที่ออม" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bpe-cS-T0X" customClass="RoundTextField" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="287" width="398" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="sJi-UE-khb"/>
+                                    </constraints>
+                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="22"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2MI-AS-ziT" customClass="RoundUIView" customModule="iGs" customModuleProvider="target">
+                            <rect key="frame" x="8" y="354.5" width="398" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PvT-pP-PbH" customClass="RoundedUIButton" customModule="iGs" customModuleProvider="target">
+                                    <rect key="frame" x="308" y="-2" width="90" height="44"/>
+                                    <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="90" id="sY1-No-odS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="เลือกรูป">
+                                        <color key="titleColor" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.74901960779999999" green="0.12941176469999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="handleImageSelect:" destination="-1" eventType="touchUpInside" id="0IM-nN-GJp"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยังไม่ได้เลือกรูปสลิปโอนเงิน" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSV-z7-hif">
+                                    <rect key="frame" x="8" y="7" width="292" height="26"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="22"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="uSV-z7-hif" firstAttribute="centerY" secondItem="2MI-AS-ziT" secondAttribute="centerY" id="Bq8-8T-53c"/>
+                                <constraint firstAttribute="bottom" secondItem="PvT-pP-PbH" secondAttribute="bottom" constant="-2" id="bpi-qo-jEJ"/>
+                                <constraint firstItem="uSV-z7-hif" firstAttribute="leading" secondItem="2MI-AS-ziT" secondAttribute="leading" constant="8" id="hZa-zK-zzZ"/>
+                                <constraint firstAttribute="height" constant="40" id="lr8-g4-W6o"/>
+                                <constraint firstAttribute="trailing" secondItem="PvT-pP-PbH" secondAttribute="trailing" id="oOK-IX-6Hl"/>
+                                <constraint firstItem="PvT-pP-PbH" firstAttribute="leading" secondItem="uSV-z7-hif" secondAttribute="trailing" constant="8" id="rBU-BC-7Zw"/>
+                                <constraint firstItem="PvT-pP-PbH" firstAttribute="top" secondItem="2MI-AS-ziT" secondAttribute="top" constant="-2" id="s4z-AT-6WM"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.71121937040000005" green="0.21210259200000001" blue="0.21192994709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFz-bN-4Y9" customClass="RoundedUIButton" customModule="iGs" customModuleProvider="target">
+                            <rect key="frame" x="147" y="760" width="120" height="50"/>
+                            <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="120" id="WGK-sT-FgM"/>
+                                <constraint firstAttribute="height" constant="50" id="jn7-ml-8vp"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="20"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                            <state key="normal" title="บันทึก">
+                                <color key="titleColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="2"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="handleSave:" destination="-1" eventType="touchUpInside" id="kVy-bX-qtX"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="2MI-AS-ziT" firstAttribute="top" secondItem="fDH-SM-W0i" secondAttribute="bottom" constant="7.5" id="53b-5J-Ljh"/>
+                        <constraint firstAttribute="bottom" secondItem="hFz-bN-4Y9" secondAttribute="bottom" constant="8" id="BtI-IJ-zkU"/>
+                        <constraint firstItem="hFz-bN-4Y9" firstAttribute="centerX" secondItem="sBD-40-bPo" secondAttribute="centerX" id="Lfq-eL-cB2"/>
+                        <constraint firstItem="fDH-SM-W0i" firstAttribute="top" secondItem="sBD-40-bPo" secondAttribute="top" constant="20" id="P2b-pp-DPf"/>
+                        <constraint firstItem="fDH-SM-W0i" firstAttribute="leading" secondItem="sBD-40-bPo" secondAttribute="leading" constant="8" id="U3k-aR-8SL"/>
+                        <constraint firstItem="2MI-AS-ziT" firstAttribute="leading" secondItem="sBD-40-bPo" secondAttribute="leading" constant="8" id="ZHw-xj-QCN"/>
+                        <constraint firstAttribute="trailing" secondItem="fDH-SM-W0i" secondAttribute="trailing" constant="8" id="r17-M9-4Zp"/>
+                        <constraint firstAttribute="trailing" secondItem="2MI-AS-ziT" secondAttribute="trailing" constant="8" id="t9d-1t-6H3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <point key="canvasLocation" x="132" y="98"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="4MW-Sp-M5F">
+            <size key="intrinsicContentSize" width="126.5" height="35.5"/>
+        </designable>
+        <designable name="GV3-gZ-Ouf">
+            <size key="intrinsicContentSize" width="153" height="36"/>
+        </designable>
+        <designable name="PvT-pP-PbH">
+            <size key="intrinsicContentSize" width="75" height="24"/>
+        </designable>
+        <designable name="bpe-cS-T0X">
+            <size key="intrinsicContentSize" width="174" height="35.5"/>
+        </designable>
+        <designable name="dLK-1O-07G">
+            <size key="intrinsicContentSize" width="106" height="35.5"/>
+        </designable>
+        <designable name="hFz-bN-4Y9">
+            <size key="intrinsicContentSize" width="91" height="44"/>
+        </designable>
+        <designable name="ksr-oe-3T0">
+            <size key="intrinsicContentSize" width="164" height="36"/>
+        </designable>
+        <designable name="zcV-EB-mFW">
+            <size key="intrinsicContentSize" width="71" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

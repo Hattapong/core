@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Trirong-Regular.ttf">
+            <string>Trirong-Regular</string>
+        </array>
+        <array key="Trirong-SemiBold.ttf">
+            <string>Trirong-SemiBold</string>
+        </array>
+        <array key="db helvethaica x med.ttf">
+            <string>DBHelvethaicaX-Med</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InterestForm" customModule="ออมทอง" customModuleProvider="target">
+            <connections>
+                <outlet property="btSave" destination="K8n-5a-7p0" id="A7t-pr-4Qc"/>
+                <outlet property="contentView" destination="MMy-QJ-mgA" id="hNp-a0-e25"/>
+                <outlet property="monthAmt" destination="HvC-Gc-S6q" id="OXd-xO-Y0p"/>
+                <outlet property="txtAccountNo" destination="4ee-qv-PIi" id="fuW-j2-FB9"/>
+                <outlet property="txtAmount" destination="pYf-a5-3Gz" id="pCM-od-eXX"/>
+                <outlet property="txtBankName" destination="34L-BR-8xg" id="44J-h9-NxT"/>
+                <outlet property="txtDateBegin" destination="AEQ-5w-TrH" id="8ry-01-8bS"/>
+                <outlet property="txtDateEnd" destination="6PV-xu-4K5" id="jbW-R2-VuM"/>
+                <outlet property="txtInitialAmt" destination="efN-f9-FJQ" id="Jso-vS-PwG"/>
+                <outlet property="txtMonth" destination="8sA-pD-40E" id="Uzn-U3-99F"/>
+                <outlet property="uploadDescription" destination="pkx-h2-HI2" id="kss-Zf-onj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" id="MMy-QJ-mgA">
+                    <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="96S-Y6-kG5">
+                            <rect key="frame" x="8" y="0.0" width="398" height="391"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TPJ-yX-zZN">
+                                    <rect key="frame" x="0.0" y="0.0" width="398" height="31.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เงินต้น" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHK-V1-9sc">
+                                            <rect key="frame" x="0.0" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15000 บาท" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efN-f9-FJQ">
+                                            <rect key="frame" x="201.5" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="-"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-Yb-PHj">
+                                    <rect key="frame" x="0.0" y="41.5" width="398" height="35"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเดือน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZf-WL-PmL">
+                                            <rect key="frame" x="0.0" y="0.0" width="196.5" height="35"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2FE-wY-bP6">
+                                            <rect key="frame" x="201.5" y="0.0" width="196.5" height="35"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLA-Z0-pi9">
+                                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="35"/>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sA-pD-40E">
+                                                    <rect key="frame" x="67.5" y="0.0" width="30" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="jvI-QV-GRH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Trirong-SemiBold" family="Trirong" pointSize="20"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="HvC-Gc-S6q">
+                                                    <rect key="frame" x="102.5" y="0.0" width="94" height="35"/>
+                                                    <color key="tintColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="handleStepperChange:" destination="-1" eventType="valueChanged" id="B0i-Zc-ZeW"/>
+                                                    </connections>
+                                                </stepper>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2o2-mn-qqg">
+                                    <rect key="frame" x="0.0" y="86.5" width="398" height="31.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จากวันที่" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdf-VQ-eiv">
+                                            <rect key="frame" x="0.0" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="วันที่ 1/5/63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEQ-5w-TrH">
+                                            <rect key="frame" x="201.5" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="..."/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8D9-g2-80e">
+                                    <rect key="frame" x="0.0" y="128" width="398" height="31.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ถึงวันที่" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQm-UC-id9">
+                                            <rect key="frame" x="0.0" y="0.0" width="199" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ถึง 5/8/63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PV-xu-4K5">
+                                            <rect key="frame" x="199" y="0.0" width="199" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="เลือกจำนวนเดือน"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S1t-bR-g8P">
+                                    <rect key="frame" x="0.0" y="169.5" width="398" height="31.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="เป็นจำนวนเงิน" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8W-gX-qRo">
+                                            <rect key="frame" x="0.0" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="450 บาท" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYf-a5-3Gz">
+                                            <rect key="frame" x="201.5" y="0.0" width="196.5" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text" value="เลือกจำนวนเดือน"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-Jw-q7K">
+                                    <rect key="frame" x="0.0" y="211" width="398" height="2"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="6BS-Sj-oZl"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S1Q-bM-V3k">
+                                    <rect key="frame" x="0.0" y="223" width="398" height="31.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="กรุณาโอนเงินไปที่" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jqi-rn-F4P">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ธนาคารกรุงเวียงจันทร์" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34L-BR-8xg">
+                                    <rect key="frame" x="0.0" y="264.5" width="398" height="31.5"/>
+                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                    <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value=""/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFb-GM-jOI">
+                                    <rect key="frame" x="0.0" y="306" width="398" height="35"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Suk-vg-fF1">
+                                            <rect key="frame" x="118.5" y="2.5" width="161" height="30"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1-2345-23-44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ee-qv-PIi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="30"/>
+                                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                                    <color key="textColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="-"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smt-WK-Oqt" customClass="RoundedUIButton" customModule="ออมทอง" customModuleProvider="target">
+                                                    <rect key="frame" x="120" y="0.0" width="41" height="30"/>
+                                                    <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Pfu-al-hwZ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="18"/>
+                                                    <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                                    <state key="normal" title="Copy">
+                                                        <color key="titleColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="handleBankAcctNoCopy:" destination="-1" eventType="touchUpInside" id="A7z-TR-jOv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Suk-vg-fF1" firstAttribute="centerY" secondItem="JFb-GM-jOI" secondAttribute="centerY" id="YoB-Nz-MAn"/>
+                                        <constraint firstAttribute="height" constant="35" id="Zv5-iy-Pxd"/>
+                                        <constraint firstItem="Suk-vg-fF1" firstAttribute="centerX" secondItem="JFb-GM-jOI" secondAttribute="centerX" id="igU-ld-Zev"/>
+                                    </constraints>
+                                </view>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMs-CG-cTH" customClass="RoundUIView" customModule="ออมทอง" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="351" width="398" height="40"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0XV-wG-YkX" customClass="RoundedUIButton" customModule="ออมทอง" customModuleProvider="target">
+                                            <rect key="frame" x="308" y="-2" width="90" height="44"/>
+                                            <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="K8x-AM-YAQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Trirong-Regular" family="Trirong" pointSize="18"/>
+                                            <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                            <state key="normal" title="เลือกรูป">
+                                                <color key="titleColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="handleSelectImage:" destination="-1" eventType="touchUpInside" id="79w-Ok-aqQ"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ยังไม่ได้เลือกรูปสลิปโอนเงิน" textAlignment="natural" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkx-h2-HI2">
+                                            <rect key="frame" x="8" y="4.5" width="292" height="31.5"/>
+                                            <fontDescription key="fontDescription" name="DBHelvethaicaX-Med" family="DB Helvethaica X" pointSize="26"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="0XV-wG-YkX" firstAttribute="top" secondItem="QMs-CG-cTH" secondAttribute="top" constant="-2" id="2nY-YL-SXm"/>
+                                        <constraint firstAttribute="trailing" secondItem="0XV-wG-YkX" secondAttribute="trailing" id="Ck8-eQ-TKm"/>
+                                        <constraint firstItem="pkx-h2-HI2" firstAttribute="centerY" secondItem="QMs-CG-cTH" secondAttribute="centerY" id="J1M-vM-PKt"/>
+                                        <constraint firstAttribute="height" constant="40" id="KFX-OC-zPq"/>
+                                        <constraint firstAttribute="bottom" secondItem="0XV-wG-YkX" secondAttribute="bottom" constant="-2" id="hTV-x7-wjB"/>
+                                        <constraint firstItem="0XV-wG-YkX" firstAttribute="leading" secondItem="pkx-h2-HI2" secondAttribute="trailing" constant="8" id="nR9-72-98I"/>
+                                        <constraint firstItem="pkx-h2-HI2" firstAttribute="leading" secondItem="QMs-CG-cTH" secondAttribute="leading" constant="8" id="zPb-rd-q0h"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="wio-TM-Pnq"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAk-u2-Da7">
+                            <rect key="frame" x="0.0" y="755" width="414" height="63"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8n-5a-7p0" customClass="RoundedUIButton" customModule="ออมทอง" customModuleProvider="target">
+                                    <rect key="frame" x="147" y="6" width="120" height="50"/>
+                                    <color key="backgroundColor" red="0.81568627449999997" green="0.6705882353" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="Eqj-Sc-lax"/>
+                                        <constraint firstAttribute="width" constant="120" id="FfU-Xh-67c"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Trirong-Regular" family="Trirong" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="20" minY="10" maxX="20" maxY="10"/>
+                                    <state key="normal" title="บันทึก">
+                                        <color key="titleColor" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" red="0.70980392160000005" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                            <real key="value" value="2"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="handleSubmit:" destination="-1" eventType="touchUpInside" id="Thc-kY-npd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="K8n-5a-7p0" firstAttribute="centerX" secondItem="ZAk-u2-Da7" secondAttribute="centerX" id="IOA-rO-QaA"/>
+                                <constraint firstItem="K8n-5a-7p0" firstAttribute="top" secondItem="ZAk-u2-Da7" secondAttribute="top" constant="6" id="S3o-B7-Ap0"/>
+                                <constraint firstAttribute="bottom" secondItem="K8n-5a-7p0" secondAttribute="bottom" constant="7" id="h19-1O-Wzx"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ZAk-u2-Da7" secondAttribute="bottom" id="9Cg-DJ-Yah"/>
+                        <constraint firstAttribute="trailing" secondItem="96S-Y6-kG5" secondAttribute="trailing" constant="8" id="9NV-I8-x8L"/>
+                        <constraint firstItem="96S-Y6-kG5" firstAttribute="top" secondItem="MMy-QJ-mgA" secondAttribute="top" id="Hyd-LJ-hNf"/>
+                        <constraint firstItem="ZAk-u2-Da7" firstAttribute="leading" secondItem="MMy-QJ-mgA" secondAttribute="leading" id="MKe-yI-ZaM"/>
+                        <constraint firstItem="96S-Y6-kG5" firstAttribute="leading" secondItem="MMy-QJ-mgA" secondAttribute="leading" constant="8" id="YUp-VX-qu5"/>
+                        <constraint firstAttribute="trailing" secondItem="ZAk-u2-Da7" secondAttribute="trailing" id="qwR-OW-2mU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="132" y="106"/>
+        </view>
+    </objects>
+</document>
